@@ -1,5 +1,17 @@
 class Solution{
-    
+    //brute force using two pointer sample code time complexity for bufrce is O(n^3)
+    int max=0,crrsum=0;
+    for(int i=0;i<n;i++){
+        for(int j=i;j<n;j++){
+            int crrsum=0
+            for(int k=i;k<j;k++){
+                crrsum+=a[i];
+                if(crrsum==sum) max=Math.max(max,j-i+1);
+            }
+        }
+    }
+
+//better approach O(n)
 //    https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=longest-sub-array-with-sum-k
     public static int lenOfLongSubarr (int [] a, int n, int sum) {
            int curr = 0,max = 0;
